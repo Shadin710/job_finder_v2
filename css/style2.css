@@ -1,0 +1,132 @@
+body{
+    background-image: linear-gradient(to left, #3798B8 70%, #000 30%);
+    font-family: 'Roboto', sans-serif;
+    color: rgba(255,255,255);
+}
+
+/*BACKGROUND-SECTION*/
+
+.main-bg{
+    background: url(../img/pexels-sergio-souza-3772226.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+.overlay{
+    background: rgba(0,0,0,0.8);
+}
+
+/* SECTION*/
+
+.section-1,
+.section-2{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+/* COMPANY-DESCRIPTION */
+.jumbotron{
+    background: transparent;
+    padding: 1rem;
+}
+
+/* PASSWORD-EYE-CSS*/
+.eye{
+    position: absolute;
+    margin-top: 4rem;
+    font-size: 0.9rem;
+    margin-left: -2rem;
+}
+
+/* INPUT-BOX */
+.input{
+    background: transparent;
+    margin-top: 1rem;
+    border: 0px;
+    width: 22rem;
+    border: 2px solid black;
+    color: rgba(255,255,255,0.5);
+    padding: 0.7rem;
+}
+::-webkit-input-placeholder{
+    color: rgba(255,255,255,0.7);
+}
+
+/* SUBMIT-BUTTON */
+
+.btn-danger{
+    background:   black;
+    border-color:  black;
+    width: 22rem;
+}
+.btn-danger:hover{
+    background: transparent;
+    transition-delay: .3s;
+    transition-duration: 1s;
+    border-color: black;
+}
+
+/* LINK */
+.text-design{
+    font-size: 12px;
+    margin-top: 0.5rem;
+}
+a{
+    color: white;
+    text-decoration: underline;
+    margin-left: 0.3rem;
+}
+a:hover{
+    color: white;
+    text-decoration: underline;
+    margin-left: 0.3rem;
+}
+
+/* RESPONSIVE-CSS */
+
+@media screen and (max-width: 767px){
+    body{
+          background : #3798B8 ;
+          background-size: cover;
+    }
+    .main-bg{
+    height: 50vh;
+    background-size: cover;
+}
+    .jumbotron{
+    padding-top: 0rem;
+    margin-top: -20vh;
+}
+    .section-2{
+    align-items: center;
+    margin-top: -55vh;
+    padding: 2rem;
+}
+    .input{
+    width: 100%;
+}
+    .btn-danger{
+    width: 100%;
+}
+}
+
+@media screen and (min-width: 768px)and (max-width : 1300px){
+    body{
+        background : #3798B8 ;
+    }
+    .main-bg{
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+}
+    .jumbotron{
+    padding-top: 0rem;
+    margin-top: -40vh;
+    margin-left: 20%;
+}
+      .section-2{
+    margin-top: 40vh;
+    padding: 2rem;
+    margin-left: -40%;
+}
+}
