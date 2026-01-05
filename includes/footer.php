@@ -25,10 +25,9 @@
         <div class="footer-links">
             <h4>Support</h4>
             <ul>
-                <li><a href="#">Help Center</a></li>
+                <li><a href="help.php">Help Center</a></li>
                 <li><a href="privacy_policy.php">Privacy Policy</a></li>
                 <li><a href="terms_of_service.php">Terms of Service</a></li>
-                <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
 
