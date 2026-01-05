@@ -1,0 +1,49 @@
+:root {
+    --primary: #6366f1;
+    --secondary: #94a3b8; /* Added for footer headings */
+    --dark: #0f172a;
+    --gray: #64748b;
+    --light: #f8fafc;
+    --white: #ffffff;    /* Added for footer text/icons */
+    --transition: all 0.3s ease; /* Added for hover effects */
+}
+
+/* Ensure the wrapper used in the footer is defined in your about page too */
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body { font-family: 'Inter', sans-serif; color: var(--dark); line-height: 1.6; }
+
+/* About Header */
+.about-header {
+    padding: 80px 0;
+    background: var(--light);
+    text-align: center;
+}
+.about-header h1 { font-weight: 800; font-size: 3rem; color: var(--dark); }
+.about-header p { color: var(--gray); font-size: 1.2rem; max-width: 600px; margin: 20px auto; }
+
+/* Story Section */
+.story-section { padding: 80px 0; }
+.story-img {
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    width: 100%;
+}
+
+/* Value Cards */
+.value-card {
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+    transition: 0.3s;
+}
+.value-card:hover { border-color: var(--primary); transform: translateY(-5px); }
+.value-icon { font-size: 2rem; color: var(--primary); margin-bottom: 20px; }
+
+

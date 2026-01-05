@@ -1,0 +1,142 @@
+/* --- IMPROVED FOOTER STYLES --- */
+/* --- UNIVERSAL LOGO STYLING --- */
+#main-footer .logo {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+    text-transform: none;
+}
+
+#main-footer .logo span {
+    color: #6366f1 !important; /* This makes the "Finder" part Indigo */
+    font-weight: 800;
+}
+#main-footer {
+    background-color: #1a1a1a !important; /* Forces dark background */
+    color: #ffffff !important;
+    padding: 80px 0 20px;
+    margin-top: 50px;
+    clear: both;
+    width: 100%;
+}
+
+/* Fix the centering and width */
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr;
+    gap: 40px;
+    margin: 0 auto 50px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+#main-footer h4 {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    color: #6366f1; /* Hardcoded color so it doesn't break if variable fails */
+    font-weight: 700;
+}
+
+#main-footer p {
+    color: #b0b0b0 !important;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* FIX: Indentation and bullet points from Bootstrap */
+.footer-links ul {
+    list-style: none !important;
+    padding: 0 !important; /* Removes the left indent */
+    margin: 0 !important;
+}
+
+.footer-links ul li {
+    margin-bottom: 12px;
+    padding: 0 !important;
+    list-style-type: none !important;
+}
+
+.footer-links ul li a {
+    text-decoration: none !important;
+    color: #b0b0b0 !important;
+    transition: 0.3s ease;
+    display: inline-block;
+}
+
+.footer-links ul li a:hover {
+    color: #ffffff !important;
+    padding-left: 5px;
+}
+
+/* Social Icons Fix */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    padding: 0;
+    list-style: none;
+}
+
+.social-icons a {
+    color: #ffffff !important;
+    background: #333;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    background: #6366f1;
+    transform: translateY(-3px);
+}
+
+/* Newsletter Fix */
+.newsletter-form {
+    display: flex;
+}
+
+.newsletter-form input {
+    padding: 12px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    background: #2a2a2a;
+    color: white !important;
+}
+
+.newsletter-form button {
+    background: #6366f1;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+.footer-bottom {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+    text-align: center;
+    color: #777;
+    font-size: 0.8rem;
+    width: 100%;
+}
+
+/* Responsive Footer */
+@media (max-width: 992px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}
