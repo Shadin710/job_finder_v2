@@ -1,0 +1,32 @@
+        :root { --primary: #6366f1; --dark: #0f172a; --gray: #64748b; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+        body { background-color: #fff; min-height: 100vh; display: flex; align-items: center; justify-content: center; }
+        
+        .auth-wrapper { display: flex; width: 100%; min-height: 100vh; }
+        
+        .auth-side-info { 
+            flex: 1; 
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.9), rgba(15, 23, 42, 0.9)), 
+                        url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1000');
+            background-size: cover;
+            display: flex; align-items: center; padding: 60px; color: white;
+        }
+
+        .auth-side-form { flex: 1; display: flex; align-items: center; justify-content: center; padding: 40px; }
+        .form-container { width: 100%; max-width: 400px; }
+
+        .logo-text { font-weight: 800; font-size: 2rem; margin-bottom: 20px; }
+        .logo-text span { color: #a5b4fc; }
+
+        .btn-back { text-decoration: none; color: var(--gray); font-size: 0.9rem; margin-bottom: 30px; display: block; }
+        .form-header h1 { font-weight: 700; color: var(--dark); }
+        
+        .input-group { position: relative; margin-bottom: 20px; }
+        .form-control { padding: 12px 15px; border-radius: 10px; border: 1px solid #e2e8f0; }
+        
+        .btn-submit { 
+            width: 100%; padding: 13px; background: var(--primary); color: white; 
+            border: none; border-radius: 10px; font-weight: 600; cursor: pointer;
+        }
+
+        @media (max-width: 992px) { .auth-side-info { display: none; } }

@@ -1,77 +1,48 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>JOB FINDER</title>
-    <!--Meta tag-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <!--bootstrap|css-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!--additional|css-->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
-    <!--Googlefont-1-->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@600&family=Roboto:wght@100;300;400;500&display=swap"
-        rel="stylesheet">
-    <!--font Awesome-->
-    <script src="https://kit.fontawesome.com/984b75d004.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seeker Login | JobFinder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/seeker_login.css">
+
 </head>
-
 <body>
-    <div class="main-bg">
-        <div class="overlay">
-            <div class="container">
-                <div class="row">
-                    <!--COMPANY-DESCRIPTION-->
 
-                    <div class="col-md-6 section-1">
-                        <div class="jumbotron">
-                            <h1 class="display-4" style="font-family:'Baloo Tamma 2', cursive; ">Job <br>Finder</h1>
-                            <p class="lead">Welcome to the app</p>
-                        </div>
-                    </div>
-                    <!--FORM-->
-
-                    <div class="col-md-6 section-2">
-                        <div class="description">
-                            <h4>Login</h4>
-                           
-                            <!--FORM-BOX-->
-                                  
-                            <form action="seeker_login_server.php" method="POST">
-                                <input type="email" class="input" placeholder="Email" name="email">
-                                <input type="password" class="input" placeholder="Password" name="pass"><br>
-                                <br><br>
-
-                                <input type="submit" class="btn btn-danger" value="Login"
-                                    style="margin-bottom: 10px;">
-                            </form>
-                            <a href="index.php"><h6><--Go Back</h6></a>
-
-                            <a href="seeker_reg.php"> <h6>Don't have an account?</a></h6>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div class="auth-wrapper">
+    <div class="auth-side-info">
+        <div>
+            <h2 class="logo-text">Job<span>Finder</span></h2>
+            <p>Access thousands of personalized job listings tailored to your skills.</p>
         </div>
     </div>
-  
 
+    <div class="auth-side-form">
+        <div class="form-container">
+            <a href="index.php" class="btn-back"><i class="fa-solid fa-chevron-left"></i> Back</a>
+            <div class="form-header">
+                <h1>Welcome Back</h1>
+                <p>Sign in to continue your search.</p>
+            </div>
 
-    <!--attachments-->
-    <!--bootstrap|js-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-        crossorigin="anonymous"></script>
+            <form action="seeker_login_server.php" method="POST">
+                <div class="mb-3">
+                    <label class="form-label">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="abcd@example.com" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" name="pass" class="form-control" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-submit">Sign In</button>
+            </form>
+            <p class="mt-4 text-center">New here? <a href="seeker_reg.php" style="color:var(--primary); text-decoration:none; font-weight:600;">Create account</a></p>
+        </div>
+    </div>
+</div>
+
 </body>
-
 </html>
