@@ -25,8 +25,8 @@
                 <h4>Support</h4>
                 <ul>
                     <li><a href="#">Help Center</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="privacy_policy.php">Privacy Policy</a></li>
+                    <li><a href="terms_of_service.php">Terms of Service</a></li>
                     <li><a href="#">Contact Us</a></li>
                 </ul>
             </div>
@@ -43,4 +43,38 @@
         <div class="footer-bottom">
             <p>&copy; 2026 JobFinder. All Rights Reserved.</p>
         </div>
+        <div class="chat-wrapper">
+            <div class="chat-window" id="chatWindow">
+            <div class="chat-header">
+                <div class="chat-status"></div>
+                <span>JobFinder Support</span>
+                <button onclick="toggleChat()">&times;</button>
+            </div>
+            <div class="chat-body">
+                <div class="message bot">
+                    Hello! 👋 How can I help you find your dream job today?
+                </div>
+            </div>
+            <div class="chat-footer">
+                <input type="text" placeholder="Type a message...">
+                <button><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+
+        <button class="chat-toggle-btn" onclick="toggleChat()">
+            <i class="fas fa-comments"></i>
+        </button>
+    </div>
     </footer>
+<script>
+    function toggleChat() {
+        const chatWindow = document.getElementById('chatWindow');
+        // Check if display is currently none or empty
+        if (chatWindow.style.display === "none" || chatWindow.style.display === "") {
+            chatWindow.style.display = "flex";
+        } else {
+            chatWindow.style.display = "none";
+        }
+        console.log("Chat toggled: " + chatWindow.style.display);
+    }
+</script>
