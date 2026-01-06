@@ -1,0 +1,118 @@
+:root {
+    --primary: #6366f1;
+    --bg-subtle: #f9fafb;
+    --text-main: #111827;
+    --text-muted: #6b7280;
+    --card-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.08);
+}
+
+body { 
+    background-color: var(--bg-subtle); 
+    font-family: 'Inter', sans-serif; 
+    color: var(--text-main);
+}
+
+/* Hero Header Section */
+.profile-header-bg {
+    height: 220px;
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Keep it below the card but above the body background */
+}
+
+.main-content { 
+    margin-top: 120px; 
+    position: relative; 
+    z-index: 10; /* Ensures the card sits above the header */
+}
+
+/* Card Refinement */
+.card-modern {
+    background: #ffffff;
+    border: 1px solid rgba(229, 231, 235, 1);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    /* Removed overflow: hidden so the image doesn't get cut at the top */
+    margin-bottom: 24px;
+}
+
+/* --- Profile Image & Upload Feature --- */
+/* 1. The Container - Forced to Center */
+.profile-img-wrapper {
+    margin-top: -65px;
+    position: relative;
+    width: 130px; 
+    height: 130px;
+    
+    /* These three lines ensure the wrapper itself stays centered */
+    display: flex !important;
+    margin-left: auto;
+    margin-right: auto;
+    
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    flex: none; /* Prevents parent from squishing it into an oval */
+}
+
+/* 2. The Image - Forced to Circle */
+.profile-img { 
+    width: 130px; 
+    height: 130px; 
+    border: 6px solid #fff; 
+    border-radius: 50%;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+    object-fit: cover;
+    display: block;
+}
+
+/* 3. The Overlay - Perfect Alignment */
+.upload-overlay {
+    position: absolute;
+    /* inset: 6px aligns it inside the white border */
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    
+    border-radius: 50%;
+    background: rgba(99, 102, 241, 0.8); /* Using your purple theme color */
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 5;
+}
+
+.profile-img-wrapper:hover .upload-overlay {
+    opacity: 1;
+}
+
+.profile-img-wrapper:hover .profile-img {
+    filter: brightness(0.8);
+}
+
+/* Rest of your existing styles... */
+.username { font-weight: 700; font-size: 1.5rem; letter-spacing: -0.025em; }
+.job-title { color: var(--primary); font-weight: 600; font-size: 0.95rem; }
+.skill-badge {
+    background: #eef2ff; color: #4338ca; border: 1px solid #e0e7ff;
+    font-weight: 500; padding: 6px 14px; border-radius: 8px;
+    display: inline-block; margin: 4px; font-size: 0.85rem;
+}
+.nav-tabs-modern { border-bottom: 2px solid #f3f4f6; gap: 24px; }
+.nav-tabs-modern .nav-link { border: none; padding: 12px 4px; color: var(--text-muted); font-weight: 500; background: transparent; position: relative; }
+.nav-tabs-modern .nav-link.active { color: var(--primary); background: transparent; }
+.nav-tabs-modern .nav-link.active::after { content: ''; position: absolute; bottom: -2px; left: 0; width: 100%; height: 2px; background: var(--primary); }
+.entry-item { padding: 16px; border-radius: 12px; border: 1px solid #f3f4f6; transition: all 0.2s ease; margin-bottom: 12px; }
+.entry-item:hover { border-color: var(--primary); background: #fdfdff; }

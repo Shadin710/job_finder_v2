@@ -19,6 +19,7 @@
         {
             $_SESSION['owner_id'] = $id;
             $_SESSION['email']=$email;
+            $_SESSION['seeker_email']=$email;
             $_SESSION['main_pass'] = $pass;
             header('Location:seeker_home.php');   
 

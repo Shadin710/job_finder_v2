@@ -26,3 +26,28 @@
     padding: 8px 20px;
     border-radius: 8px;
 }
+.nav-btn {
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn.login {
+    background: #6366f1;
+    color: white !important;
+}
+
+.nav-btn.login:hover {
+    background: #4f46e5;
+}
+
+.nav-btn.logout {
+    border: 1px solid #ef4444;
+    color: #ef4444 !important;
+}
+
+.nav-btn.logout:hover {
+    background: #ef4444;
+    color: white !important;
+}
