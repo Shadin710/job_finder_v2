@@ -1,14 +1,12 @@
 
+
+
 <?php
+require_once __DIR__ . '/../config.php';
 
-$conn = mysqli_connect('127.0.0.1','root','');
+$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-if(!$conn)
-{
-    echo "Not Connected to the server";
-}
-if(!mysqli_select_db($conn,'job'))
-{
-    echo "database is not selected";
+if(!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
 }
 ?>
