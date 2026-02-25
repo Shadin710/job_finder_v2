@@ -1,16 +1,9 @@
 FROM php:8.2-apache
 
-# Install mysqli
 RUN docker-php-ext-install mysqli
 
-# Disable conflicting MPM modules
-RUN a2dismod mpm_event || true
-RUN a2enmod mpm_prefork
+# Remove default apache config that causes conflict
+RUN rm -rf /etc/apache2/mods-enabled/mpm_event.load || true
+RUN rm -rf /etc/apache2/mods-enabled/mpm_event.conf || true
 
-# Copy project files
 COPY . /var/www/html/
-
-# Set correct permissions
-RUN chown -R www-data:www-data /var/www/html
-
-EXPOSE 80
