@@ -2,11 +2,15 @@
 
 
 <?php
-require_once __DIR__ . '/../config.php';
 
-$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASS, DB_NAME);
+$host = getenv('DB_HOST');
+$user = getenv('DB_USER');
+$pass = getenv('DB_PASS');
+$name = getenv('DB_NAME');
 
-if(!$conn) {
+$conn = mysqli_connect($host, $user, $pass, $name);
+
+if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
 ?>
